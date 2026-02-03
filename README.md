@@ -1,94 +1,162 @@
-# Análise do Perfil da Força de Trabalho em Tecnologia no Brasil
+# 💻 A Força de Trabalho em Tecnologia no Brasil
+### Uma análise baseada em microdados públicos e Machine Learning
 
-Este projeto realiza uma análise quantitativa dos microdados da Pesquisa Nacional por Amostra de Domicílios Contínua (PNAD Contínua) do IBGE para traçar o perfil dos profissionais de Tecnologia da Informação (TI) no Brasil. O script em Python processa os dados brutos, filtra as ocupações relevantes e gera estatísticas descritivas sobre o perfil demográfico, geográfico, educacional e de renda desses profissionais.
+<div align="center">
+
+<img 
+  src="./assets/header.png" 
+  alt="Força de Trabalho em Tecnologia no Brasil" 
+  width="100%" 
+  height="260px"
+  style="object-fit: cover;"
+/>
+
+<br/>
+
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![Pandas](https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white)
+![Scikit-Learn](https://img.shields.io/badge/Scikit--Learn-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white)
+![XGBoost](https://img.shields.io/badge/XGBoost-EC1C24?style=for-the-badge&logo=apache&logoColor=white)
+![IBGE](https://img.shields.io/badge/Dados%20IBGE-PNAD%20Contínua-0066CC?style=for-the-badge)
+
+<p align="center">
+  <b>Análise quantitativa e preditiva do perfil e dos determinantes de renda dos profissionais de TI no Brasil, utilizando microdados da PNAD Contínua.</b>
+</p>
+
+<p align="center">
+  📄 <a href="./artigo/SIMCADS_IA.pdf">Artigo Científico (SIMCADS)</a> • 
+  🧠 <a href="./codigo">Código e Modelagem</a>
+</p>
+
+</div>
 
 ---
 
-## Estrutura do Projeto
+## 📌 Visão Geral
 
-O diretório está organizado com os seguintes arquivos:
+Este projeto investiga **quem são os profissionais de Tecnologia da Informação (TI) no Brasil** e **quais fatores mais influenciam sua renda**, a partir de **microdados oficiais do IBGE (PNAD Contínua)**.
 
--   `PNADC_012024.txt`, `PNADC_022024.txt`, etc.: Arquivos de microdados brutos da PNAD Contínua para cada trimestre de 2024.
--   `input_PNADC_trimestral.sas`: Arquivo de layout fornecido pelo IBGE, utilizado pelo script para entender a estrutura e as posições das colunas nos arquivos de dados.
--   `Estrutura_Ocupacao_COD.xls`: Documento oficial do IBGE com a "Classificação de Ocupações para Pesquisas Domiciliares (COD)". Essencial para identificar os códigos corretos para filtrar os profissionais de TI na coluna `V4010`.
--   `ler_panda.py`: O script principal em Python que executa todo o processo de leitura, filtragem e análise dos dados.
--   `README.md`: Este arquivo, com a documentação do projeto.
+A análise combina:
+
+- 📊 **Estatística descritiva**
+- 🧩 **Engenharia de variáveis**
+- 🤖 **Modelos de Machine Learning (XGBoost)**
+
+para comparar dois perfis distintos do mercado:
+
+- **Profissionais de Nível Superior**
+- **Profissionais de Nível Técnico / Médio**
+
+> O estudo evidencia que o mercado de TI **não é homogêneo**:  
+> os determinantes de renda variam significativamente conforme o nível de formação.
 
 ---
 
-## Fonte dos Dados
+## 🔍 Principais Resultados
 
-Os dados utilizados são da Pesquisa Nacional por Amostra de Domicílios Contínua (PNAD Contínua), originalmente disponibilizados pelo IBGE estão centralizados no seguinte link:
+### 📈 Performance dos Modelos
+- **Nível Superior**
+  - Acurácia final: **~64%**
+  - Principal fator preditivo: **Faixa Etária**
+- **Nível Técnico**
+  - Acurácia final: **~69%**
+  - Principal fator preditivo: **Carteira Assinada (formalização)**
 
--   **Microdados 2024:** [https://ftp.ibge.gov.br/Trabalho_e_Rendimento/Pesquisa_Nacional_por_Amostra_de_Domicilios_continua/Trimestral/Microdados/2024](https://ftp.ibge.gov.br/Trabalho_e_Rendimento/Pesquisa_Nacional_por_Amostra_de_Domicilios_continua/Trimestral/Microdados/2024)
--   **Microdados 2023:** [https://ftp.ibge.gov.br/Trabalho_e_Rendimento/Pesquisa_Nacional_por_Amostra_de_Domicilios_continua/Trimestral/Microdados/2023](https://ftp.ibge.gov.br/Trabalho_e_Rendimento/Pesquisa_Nacional_por_Amostra_de_Domicilios_continua/Trimestral/Microdados/2023)
+Esses resultados superam o desempenho aleatório (50%) e demonstram **padrões estruturais relevantes** no mercado de trabalho em TI.
 
 ---
 
-## Pré-requisitos
+### 🧠 Insights Relevantes
 
-Para executar a análise, você precisará ter o seguinte software instalado:
+- 👩‍💻 **Nível Superior**
+  - Idade (25–34 anos) tem maior impacto que escolaridade adicional
+  - Mercado valoriza fase de carreira, adaptabilidade e experiência recente
 
--   Python 3.x
--   Biblioteca `pandas` do Python
+- 🧑‍🔧 **Nível Técnico**
+  - Formalização do vínculo empregatício é o principal divisor salarial
+  - Indício de maior vulnerabilidade à informalidade
 
-Se você não tiver a biblioteca `pandas` instalada, pode instalá-la usando o pip:
+---
+
+## 🗂 Estrutura do Repositório
+
 ```bash
-pip install pandas
+.
+├── artigo/              # Artigo científico (PDF)
+├── codigo/              # Scripts Python e pipeline de ML
+├── dados/               # Instruções e links para microdados
+├── assets/              # Imagens e visualizações
+└── README.md            # Visão geral (este arquivo)
 ```
 
----
+## 📄 Publicação Acadêmica
 
-## Como Executar
+Este trabalho foi apresentado no **2º SIMCADS — Simpósio de Análise e Desenvolvimento de Sistemas** no **IFSP — Campus Cubatão**.
 
-1.  **Baixe os Arquivos:** Faça o download de todos os arquivos do link do Google Drive fornecido e coloque-os no mesmo diretório que o script `ler_panda.py`.
-2.  **Execute o Script:** Abra um terminal na pasta do projeto e execute o seguinte comando:
-    ```bash
-    python3 ler_panda.py
-    ```
-3.  **Acompanhe a Saída:** O script processará os quatro trimestres e, ao final, imprimirá a análise completa diretamente no terminal.
+> **Título:** Determinantes de Renda em TI no Brasil: uma abordagem de Machine Learning para análise de perfis por nível de formação
 
----
+### 👩‍💻 Autores e Colaboradores
 
-## Detalhes da Análise
-
-O script realiza as seguintes etapas lógicas:
-
-1.  **Leitura da Estrutura:** Utiliza o arquivo `input_PNADC_trimestral.sas` para mapear as 420 colunas dos arquivos de dados brutos.
-2.  **Processamento em Chunks:** Lê os arquivos de dados trimestrais em pedaços (chunks) para não sobrecarregar a memória RAM.
-3.  **Filtro de Profissionais de TI:** A identificação dos profissionais de TI é feita na coluna `V4010` (Código da ocupação). Os códigos utilizados são baseados na **"Classificação de Ocupações para Pesquisas Domiciliares (COD)"** do IBGE e incluem as seguintes famílias:
-    -   Dirigentes e Gerentes
-        -   `1330`: Gerentes de tecnologia da informação
-    -   Profissionais de Nível Superior
-        -   `2151`: Engenheiros em eletrônicos
-        -   `2153`: Engenheiros em telecomunicações
-        -   `2166`: Desenhistas gráficas e de multimídia
-        -   `2356`: Instrutores em tecnologias da informação
-        -   `2434`: Profissionais de vendas de tecnologia da informação e comunicações
-    -   Profissionais de Tecnologias da Informação e Comunicações (Categoria Principal)
-        -   `2511`: Analistas de sistemas
-        -   `2512`: Desenvolvedores de programas e aplicativos (software)
-        -   `2513`: Desenvolvedores de páginas de internet (web) e multimídia
-        -   `2514`: Programadores de aplicações
-        -   `2519`: Desenvolvedores e analistas de programas e aplicativos (software) e multimídia não classificados anteriormente
-        -   `2521`: Desenhistas e administradores de bases de dados
-        -   `2522`: Administradores de sistemas
-        -   `2523`: Profissionais em rede de computadores
-        -   `2529`: Especialistas em base de dados e em redes de computadores não classificados anteriormente
-    -   Técnicos e Profissionais de Nível Médio
-        -   `3113`: Eletrotécnicos
-        -   `3114`: Técnicos em eletrônica
-        -   `3522`: Técnicos de engenharia de telecomunicações
-    -   Técnicos de Nível Médio da Tecnologia da informação e das Comunicações (Categoria Principal)
-        -   `3511`: Técnicos em operações de tecnologia da informação e das comunicações
-        -   `3512`: Técnicos em assistência ao usuário de tecnologia da informação e das comunicações
-        -   `3513`: Técnicos de redes e sistemas de computadores
-        -   `3514`: Técnicos da web
-        -   `3521`: Técnicos em radiodifusão e gravação audivisual
-    -   Trabalhadores Especializados em Eletrônica e Eletricidade
-        -   `7421`: Mecânicos e reparadores em eletrônica
-        -   `7422`: Instaladores e reparadores em tecnologia da informação e comunicações
-    -   Trabalhadores de Apoio a Operadores
-        -   `4131`: Operadores de máquina de processamento de texto e mecanógrafos
-        -   `4132`: Operadores de entrada de dados
-4.  **Geração dos Resultados:** Calcula e exibe estatísticas sobre a distribuição geográfica, perfil de gênero, renda, educação e idade dos profissionais encontrados.
+<table align="center">
+  <tr>
+    <td align="center">
+      <a href="https://github.com/Laysabernardes">
+        <img src="https://media.licdn.com/dms/image/v2/D4D03AQHunSiEmE1sIg/profile-displayphoto-scale_400_400/B4DZpB_RKyIMAg-/0/1762043697450?e=1771459200&v=beta&t=L00Ao1xa8BnBGy-y5RV3pVgAu3kqwbV7vWPiNHR3Pq0" width="100px;" alt="Laysa Bernardes"/><br />
+        <sub><b>Laysa Bernardes</b></sub>
+      </a><br />
+      <a href="https://www.linkedin.com/in/laysabernardes/"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=flat&logo=linkedin&logoColor=white" height="15px"/></a>
+    </td>
+    <td align="center">
+      <a href="https://github.com/LucasLoopsT">
+        <img src="https://github.com/LucasLoopsT.png" width="100px;" alt="Lucas Lopes"/><br />
+        <sub><b>Lucas Lopes</b></sub>
+      </a><br />
+      <a href="https://www.linkedin.com/in/lucaslopescruz/"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=flat&logo=linkedin&logoColor=white" height="15px"/></a>
+    </td>
+    <td align="center">
+      <a href="https://github.com/BeatrizBastosBorges">
+        <img src="https://github.com/BeatrizBastosBorges.png" width="100px;" alt="Beatriz Bastos Borges"/><br />
+        <sub><b>Beatriz Bastos</b></sub>
+      </a><br />
+      <a href="https://www.linkedin.com/in/beatrizbastosborges/"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=flat&logo=linkedin&logoColor=white" height="15px"/></a>
+    </td>
+    <td align="center">
+      <a href="https://github.com/edusousax/">
+        <img src="https://media.licdn.com/dms/image/v2/D4D03AQGJ6Ym2VizkQQ/profile-displayphoto-scale_400_400/B4DZhUHGEAGgAk-/0/1753757803454?e=1771459200&v=beta&t=j_zkBL9pOMFiM_fgM6xyeq0MxOZMLUfJxoZk0aD0XZI" width="100px;" alt="Eduardo Miranda"/><br />
+        <sub><b>Eduardo Miranda</b></sub>
+      </a><br />
+      <a href="https://www.linkedin.com/in/edusousax/"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=flat&logo=linkedin&logoColor=white" height="15px"/></a>
+    </td>
+  </tr>
+  <tr>
+    <td align="center">
+      <a href="https://github.com/fod0rr">
+        <img src="https://media.licdn.com/dms/image/v2/D4D03AQH5dcBOxHj-EA/profile-displayphoto-scale_400_400/B4DZjISpm9HwAo-/0/1755706990467?e=1771459200&v=beta&t=jbad8BLn-vJfarTIoZpj8rjPMpev8eXVE2Ubl2ZXwrI" width="100px;" alt="Maria Eduarda Fodor"/><br />
+        <sub><b>Maria E. Fodor</b></sub>
+      </a><br />
+      <a href="https://www.linkedin.com/in/fod0rr/"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=flat&logo=linkedin&logoColor=white" height="15px"/></a>
+    </td>
+    <td align="center">
+      <a href="https://github.com/l3gium">
+        <img src="https://github.com/l3gium.png" width="100px;" alt="Miguel Luizatto"/><br />
+        <sub><b>Miguel Luizatto</b></sub>
+      </a><br />
+      <a href="https://www.linkedin.com/in/miguel-luizatto/"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=flat&logo=linkedin&logoColor=white" height="15px"/></a>
+    </td>
+    <td align="center">
+      <a href="https://github.com/PedroXav">
+        <img src="https://github.com/PedroXav.png" width="100px;" alt="Pedro Xavier"/><br />
+        <sub><b>Pedro Xavier</b></sub>
+      </a><br />
+      <a href="https://www.linkedin.com/in/pedro-xavier-oliveira/"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=flat&logo=linkedin&logoColor=white" height="15px"/></a>
+    </td>
+    <td align="center">
+      <a href="--">
+        <img src="https://media.licdn.com/dms/image/v2/C4D03AQG0bUs58kfC1w/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1616441421306?e=1771459200&v=beta&t=3WMViowNTrP-x0tLqIlT9huHd2ELyWBO-TzSN7ceZnA" width="100px;" alt="Paulo Mannini"/><br />
+        <sub><b>Paulo Mannini</b></sub>
+      </a><br />
+      <a href="https://www.linkedin.com/in/paulo-mannini-pmp-psm-i-msc-itil-2681542b/"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=flat&logo=linkedin&logoColor=white" height="15px"/></a><br />
+      <sub>👨‍🏫 Orientador</sub>
+    </td>
+  </tr>
+</table>
