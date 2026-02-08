@@ -1,5 +1,4 @@
-# 💻 A Força de Trabalho em Tecnologia no Brasil
-### Uma análise baseada em microdados públicos e Machine Learning
+# 
 
 <div align="center">
 
@@ -10,7 +9,7 @@
   height="260px"
   style="object-fit: cover;"
 />
-
+#
 <br/>
 
 ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
@@ -56,7 +55,7 @@ para comparar dois perfis distintos do mercado:
 
 O dashboard interativo deste projeto está disponível online! Nele, você pode explorar os gráficos e as análises preditivas detalhadas por nível de formação.
 
-👉 **[Acesse o Dashboard Aqui](https://laysabernardes-determinantes-renda-ti.streamlit.app/)**
+👉 **[Acesse o Dashboard Aqui](https://laysabernardes-forca-de-trabalho-em-ti-no-br.streamlit.app/)**
 
 > **Nota de Autoria:** O desenvolvimento da interface, a arquitetura web em Streamlit e a lógica de visualização de dados foram realizados integralmente por mim (**Laysa Bernardes**) como uma extensão técnica do trabalho de pesquisa original.
 
