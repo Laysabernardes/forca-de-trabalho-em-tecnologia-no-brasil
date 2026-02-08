@@ -3,13 +3,13 @@ import pandas as pd
 import plotly.express as px
 
 st.set_page_config(
-    page_title="Determinantes de Renda TI | Machine Learning", 
+    page_title="Força de Trabalho em TI no Brasil | Machine Learning", 
     page_icon="💻", 
     layout="wide"
 )
 
 # No título principal do dashboard
-st.title("💻 Determinantes de Renda em TI no Brasil: Uma Abordagem de Machine Learning")
+st.title("💻 Força de Trabalho em TI no Brasil: Uma Abordagem de Machine Learning")
 
 # Estilização customizada
 st.markdown("""

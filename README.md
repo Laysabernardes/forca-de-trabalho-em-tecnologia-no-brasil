@@ -4,7 +4,7 @@
 <div align="center">
 
 <img 
-  src="./assets/header.png" 
+  src="./assets/capa.png" 
   alt="Força de Trabalho em Tecnologia no Brasil" 
   width="100%" 
   height="260px"
