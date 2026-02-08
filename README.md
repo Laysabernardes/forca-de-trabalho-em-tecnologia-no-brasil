@@ -3,7 +3,7 @@
 <div align="center">
 
 <img 
-  src="./assets/capa.png" 
+  src="./assets/capa2.png" 
   alt="Força de Trabalho em Tecnologia no Brasil" 
   width="100%" 
   height="260px"
@@ -17,6 +17,7 @@
 ![Scikit-Learn](https://img.shields.io/badge/Scikit--Learn-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white)
 ![XGBoost](https://img.shields.io/badge/XGBoost-EC1C24?style=for-the-badge&logo=apache&logoColor=white)
 ![IBGE](https://img.shields.io/badge/Dados%20IBGE-PNAD%20Contínua-0066CC?style=for-the-badge)
+![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge&logo=Streamlit&logoColor=white)
 
 <p align="center">
   <b>Análise quantitativa e preditiva do perfil e dos determinantes de renda dos profissionais de TI no Brasil, utilizando microdados da PNAD Contínua.</b>
