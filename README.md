@@ -52,6 +52,16 @@ para comparar dois perfis distintos do mercado:
 
 ---
 
+## 🚀 Demonstração ao Vivo
+
+O dashboard interativo deste projeto está disponível online! Nele, você pode explorar os gráficos e as análises preditivas detalhadas por nível de formação.
+
+👉 **[Acesse o Dashboard Aqui](link_do_seu_site_no_streamlit)**
+
+> **Nota de Autoria:** O desenvolvimento da interface, a arquitetura web em Streamlit e a lógica de visualização de dados foram realizados integralmente por mim (**Laysa Bernardes**) como uma extensão técnica do trabalho de pesquisa original.
+
+---
+
 ## 🔍 Principais Resultados
 
 ### 📈 Performance dos Modelos

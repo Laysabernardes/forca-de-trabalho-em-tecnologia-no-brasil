@@ -16,7 +16,7 @@ print("\n\n--- Iniciando Etapa 2: Modelagem de Machine Learning (com Seleção d
 
 # --- 1. CARREGAR E PREPARAR OS DADOS DO CSV ---
 try:
-    df = pd.read_csv('profissionais_tic_encontrados_anual.csv')
+    df = pd.read_csv('../dados/profissionais_tic_encontrados_anual.csv')
 except FileNotFoundError:
     print(f"ERRO: Arquivo 'profissionais_tic_encontrados_anual.csv' não encontrado.")
     exit()
