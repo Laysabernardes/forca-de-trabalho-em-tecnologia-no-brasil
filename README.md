@@ -56,7 +56,7 @@ para comparar dois perfis distintos do mercado:
 
 O dashboard interativo deste projeto está disponível online! Nele, você pode explorar os gráficos e as análises preditivas detalhadas por nível de formação.
 
-👉 **[Acesse o Dashboard Aqui](link_do_seu_site_no_streamlit)**
+👉 **[Acesse o Dashboard Aqui](https://laysabernardes-determinantes-renda-ti.streamlit.app/)**
 
 > **Nota de Autoria:** O desenvolvimento da interface, a arquitetura web em Streamlit e a lógica de visualização de dados foram realizados integralmente por mim (**Laysa Bernardes**) como uma extensão técnica do trabalho de pesquisa original.
 
@@ -111,7 +111,7 @@ Este trabalho foi apresentado no **2º SIMCADS — Simpósio de Análise e Desen
   <tr>
     <td align="center">
       <a href="https://github.com/Laysabernardes">
-        <img src="https://media.licdn.com/dms/image/v2/D4D03AQHunSiEmE1sIg/profile-displayphoto-scale_400_400/B4DZpB_RKyIMAg-/0/1762043697450?e=1771459200&v=beta&t=L00Ao1xa8BnBGy-y5RV3pVgAu3kqwbV7vWPiNHR3Pq0" width="100px;" alt="Laysa Bernardes"/><br />
+        <img src="https://media.licdn.com/dms/image/v2/D4D03AQF7ZKZDBRxdbA/profile-displayphoto-scale_200_200/B4DZwwhq86IcAY-/0/1770340661364?e=1772064000&v=beta&t=cFPcyyUkpvupIR9VdG6Qt8uk3u1Vd-0K5s-AcZ1MvvY" width="100px;" alt="Laysa Bernardes"/><br />
         <sub><b>Laysa Bernardes</b></sub>
       </a><br />
       <a href="https://www.linkedin.com/in/laysabernardes/"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=flat&logo=linkedin&logoColor=white" height="15px"/></a>
